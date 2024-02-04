@@ -35,7 +35,7 @@ var sprite = new Sprite(texture, location: (32, 32));
 
 コンストラクタで初期化した後も、`sprite.Location` などでプロパティの取得/設定が可能です。
 
-詳しくは[APIリファレンス](/api/Promete.Graphics.Sprite)を参照してください。
+詳しくはAPIリファレンスを参照してください。
 
 ## コンテナ
 
