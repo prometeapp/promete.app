@@ -39,6 +39,7 @@ export default defineConfig({
           { text: 'Element とは？', link: '/guide/basic/use-elements' },
           { text: '好きなテキストを表示する', link: '/guide/basic/use-text' },
           { text: '図形を画面に表示する', link: '/guide/basic/use-shape' },
+          { text: '9スライススプライトを表示する', link: '/guide/basic/use-9slice-sprite' },
           { text: 'キーボード入力を読み取る', link: '/guide/basic/input-keyboard' },
           { text: 'マウス入力を読み取る', link: '/guide/basic/input-mouse' },
           { text: '音声を扱う', link: '/guide/basic/use-audio' },
