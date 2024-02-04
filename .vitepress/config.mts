@@ -6,12 +6,19 @@ export default defineConfig({
   description: ".NET向け、2Dに特化した、次世代のゲームエンジン。",
   lang: 'ja-JP',
 
-  lastUpdated: true,
-  cleanUrls: true,
-
   head: [
     ['link', { rel: 'stylesheet', href: 'https://koruri.chillout.chat/koruri.css' }]
   ],
+
+  markdown: {
+    container: {
+      tipLabel: '💡 Tips',
+      warningLabel: '注意！',
+      dangerLabel: '警告！',
+      infoLabel: 'Note: ',
+      detailsLabel: 'もっと見る',
+    }
+  },
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -27,6 +34,7 @@ export default defineConfig({
           { text: 'Promete とは？', link: '/guide/basic/about' },
           { text: 'クイックスタート', link: '/guide/basic/getting-started' },
           { text: '"Hello, world!"', link: '/guide/basic/hello-world' },
+          { text: 'ウィンドウをカスタマイズする', link: '/guide/basic/customize-window' },
           { text: '画像ファイルを画面に表示する', link: '/guide/basic/use-texture' },
           { text: 'Element とは？', link: '/guide/basic/use-elements' },
           { text: '好きなテキストを表示する', link: '/guide/basic/use-text' },
@@ -42,9 +50,24 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'コンポーネント', link: '/guide/advanced/use-components' },
-          { text: 'プラグインシステム', link: '/guide/advanced/plugin-system' },
           { text: 'ゲームデータの管理', link: '/guide/advanced/manage-data' },
           { text: 'Element を補完移動させる', link: '/guide/advanced/smooth-movement' },
+        ],
+      },
+      {
+        text: '機能別のマニュアル',
+        items: [
+          { text: 'シーンのライフサイクル', link: '/guide/features/scene-lifecycle' },
+          { text: 'ウィンドウ', link: '/guide/features/window' },
+          { text: 'マウス入力', link: '/guide/features/mouse' },
+          { text: 'キーボード入力', link: '/guide/features/keyboard' },
+          { text: 'ベクトル', link: '/guide/features/vector' },
+          { text: 'フォント', link: '/guide/features/font' },
+          { text: 'オーディオプレイヤーとソース', link: '/guide/features/audio-player' },
+          { text: 'プラグインシステム', link: '/guide/features/plugin-system' },
+          { text: 'テクスチャファクトリ', link: '/guide/features/texture-factory' },
+          { text: 'コンソールレイヤー', link: '/guide/features/console-layer' },
+          { text: 'グリフレンダラー', link: '/guide/features/glyph-renderer' },
         ],
       },
       {

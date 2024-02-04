@@ -25,6 +25,7 @@ app.Run<MainScene>();
 
 ```csharp
 using Promete;
+using Promete.Windowing;// [!code ++]
 
 public class MainScene : Scene// [!code --]
 public class MainScene(ConsoleLayer console) : Scene// [!code ++]
@@ -50,4 +51,5 @@ Prometeでは、このように登録したプラグインのインスタンス�
 
 ウィンドウに文字が表示されましたね。おめでとうございます！
 
-次のページでは、画像ファイルを読み込み、表示する方法を解説します。
+次のページでは、ウィンドウを細かくカスタマイズする方法を学びます。<br/>
+画像を表示できるようになるのはもうちょっと先です…。
