@@ -25,23 +25,22 @@
 
 ```csharp
 using Promete;
-using Promete.Windowing;
 using Promete.Graphics;// [!code ++]
 
-public class MainScene(ConsoleLayer console, IWindow window) : Scene
+public class MainScene(ConsoleLayer console) : Scene
 {
     private ITexture texture;// [!code ++]
 
     public override void OnStart()
     {
         console.Print("Hello, world!");// [!code --]
-        window.Size = (300, 300);
-        texture = window.TextureFactory.Load("assets/ichigo.png");// [!code ++]
+        Window.Size = (300, 300);
+        texture = Window.TextureFactory.Load("assets/ichigo.png");// [!code ++]
     }
 
     public override void OnUpdate()
     {
-        window.Title = $"{window.FramePerSeconds} fps";
+        Window.Title = $"{Window.FramePerSeconds} fps";
     }
 }
 ```
@@ -53,7 +52,8 @@ public class MainScene(ConsoleLayer console, IWindow window) : Scene
 さて、これだけではまだ画像が表示されません。次に、画像を表示するためのコードを書きましょう。`OnStart` メソッドの中に次のような処理を追加します。
 
 ```csharp
-var sprite = new Sprite(texture, location: (32, 32));
+var sprite = new Sprite(texture)
+  .Location(32, 32);
 Root.Add(sprite);
 ```
 

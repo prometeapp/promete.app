@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "Promete Engine"
+  name: "Promete"
   text: "2D Game Powered with .NET"
   tagline: 2Dに特化し、シンプルなAPI、充実した機能、高い拡張性を持った、.NET向けのゲームエンジンです。
   actions:

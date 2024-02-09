@@ -2,31 +2,15 @@
 
 ウィンドウのサイズやタイトルバーのテキストを変更したり、フルスクリーンにしたりと、細かい設定を行うための方法を示します。
 
-前回、コンソールの機能を使うために `ConsoleLayer` のインスタンスをシーンのコンストラクタで受け取りました。同様に、ウィンドウの機能を使うために `IWindow` のインスタンスを引数に追加するように書き換えましょう。
+Scene クラスには `Window` プロパティがあり、このプロパティを介してウィンドウの細かな設定が行えます。
 
-`MainScene.cs` を次のように書き換えてください。
-
-
-```csharp
-using Promete;
-using Promete.Windowing;// [!code ++]
-
-public class MainScene(ConsoleLayer console) : Scene// [!code --]
-public class MainScene(ConsoleLayer console, IWindow window) : Scene// [!code ++]
-{
-    public override void OnStart()
-    {
-        console.Print("Hello, world!");
-    }
-}
-```
 
 ## サイズを変更する
 
 まずはウィンドウのサイズを変更してみましょう。`OnStart` メソッドの中に処理を追加します。
 
 ```cs
-window.Size = (300, 300);
+Window.Size = (300, 300);
 ```
 
 この状態でビルドして実行すると、ウィンドウのサイズが変更されていることが確認できます。
@@ -44,7 +28,7 @@ window.Size = (300, 300);
 ```csharp
 public override void OnUpdate()
 {
-    window.Title = $"{window.FramePerSeconds} fps";
+    Window.Title = $"{window.FramePerSeconds} fps";
 }
 ```
 
